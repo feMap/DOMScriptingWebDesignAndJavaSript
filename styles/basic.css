@@ -9,6 +9,7 @@ header nav a.here:active {
   color: #ffcd4b;
 }
 
+/* change hero_image in different pages url */
 #about .hero_image {
   background-image: url(../images/image02.jpg);
 }
@@ -23,4 +24,43 @@ header nav a.here:active {
 
 #contact .hero_image {
   background-image: url(../images/image05.jpg);
+}
+
+/* slideshow Part css */
+#slideshow {
+  width: 150px;
+  height: 100px;
+  position: relative;
+  overflow: hidden;
+}
+
+#preview {
+  position: absolute;
+  border-width: 0;
+  outline-width: 0;
+}
+
+
+.col-3 {
+  /* display: inline-block; */
+  float: left;
+  max-width: 25%;
+  margin-right: 20px;
+}
+
+.col-9 {
+  /* display: inline-block; */
+  float: right;
+  max-width: 75%;
+  text-align: justify;
+}
+
+#intro {
+  margin-top: 0;
+}
+
+article::after {
+  clear: both;
+  content: "";
+  display: block;
 }

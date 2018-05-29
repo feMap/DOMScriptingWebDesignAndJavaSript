@@ -109,19 +109,21 @@ function prepareSlideshow() {
   if (!document.getElementById("intro")) return false;
 
   var intro = document.getElementById("intro");
+  var picPart = document.getElementById("picPart");
   var slideshow = document.createElement("div");
   slideshow.setAttribute("id", "slideshow");
 
   var preview = document.createElement("img");
-  preview.setAttribute("src", "images.gif");
+  preview.setAttribute("src", "images/slideshow.gif");
   preview.setAttribute("alt", "a glimpse of what awaits you");
   preview.setAttribute("id", "preview");
 
   slideshow.appendChild(preview);
-  insertAfter(slideshow, intro);
+  picPart.appendChild(slideshow);
 
-  var links = intro.getElementsByTagName("a");
+  var links = document.getElementsByTagName("a");
   var destination;
+
   for (var i = 0; i < links.length; i++) {
     links[i].onmouseover = function() {
       destination = this.getAttribute("href");
@@ -142,6 +144,30 @@ function prepareSlideshow() {
       }
     }
   }
+}
+
+function showSection(id) {
+  var sections = document.getElementByTagName("section");
+
+  for (var i = 0; i < sections.length; i++) {
+    if (sections[i].getAttribute("id") != id) {
+      sections[i].style.display = "none";
+    } else {
+      sections[i].style.display = "block";
+    }
+  }
+}
+
+function prepareInternalnav() {
+  if (!document.getElementByTagName) return false;
+  if (!document.getElementById) return false;
+  var articles = document.getElementByTagName("article");
+  if (articles.length == 0) return false;
+
+  var navs = article[0].getElementsByTagName("nav");
+  if (navs.length == 0) return false;
+
+  var nav = navs[0];
 }
 
 

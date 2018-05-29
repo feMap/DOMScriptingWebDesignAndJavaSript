@@ -1,0 +1,26 @@
+@import url(layout.css);
+/* @import url(color.css); */
+@import url(typography.css);
+
+header nav a.here:link,
+header nav a.here:visited,
+header nav a.here:hover,
+header nav a.here:active {
+  color: #ffcd4b;
+}
+
+#about .hero_image {
+  background-image: url(../images/image02.jpg);
+}
+
+#photos .hero_image {
+  background-image: url(../images/image03.jpg);
+}
+
+#live .hero_image {
+  background-image: url(../images/image04.jpg);
+}
+
+#contact .hero_image {
+  background-image: url(../images/image05.jpg);
+}
